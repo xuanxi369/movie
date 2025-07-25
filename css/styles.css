@@ -36,7 +36,7 @@ LibreTV 全局样式
     stroke: currentColor;
 }
 
-/* :root {
+:root {
     /* 赛博影视主题配色方案 - 柔和版 */
     --primary-color: #00ccff;       /* 霓虹蓝主色调 */
     --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */
@@ -51,9 +51,9 @@ LibreTV 全局样式
     --card-gradient-end: #203145;   /* 卡片结束色 */
     --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */
     --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜
-} */
+}
 
-:root {
+/* :root {
     /* 赛博影视主题配色方案 - 柔和版 */
     --primary-color: #1abc9c;       /* 霓虹蓝主色调 */
     --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */
@@ -68,7 +68,7 @@ LibreTV 全局样式
     --card-gradient-end: #203145;   /* 卡片结束色 */
     --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */
     --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜
-}
+} */
         
 .page-bg {
     background: linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end));
