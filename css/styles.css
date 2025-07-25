@@ -12,7 +12,7 @@ LibreTV 全局样式
     position: absolute;
     top: 12px;
     right: 12px;
-    background: #222;
+    background: #871717;
     border: 1px solid #333;
     border-radius: 8px;
     padding: 6px;
@@ -26,7 +26,7 @@ LibreTV 全局样式
 }
 
 .close-btn:hover {
-    background: #333;
+    background: #c25858;
     border-color: #555;
 }
 
@@ -38,16 +38,16 @@ LibreTV 全局样式
 
 :root {
     /* 赛博影视主题配色方案 - 柔和版 */
-    --primary-color: #00ccff;       /* 霓虹蓝主色调 */
+    --primary-color: #259d51;       /* 霓虹蓝主色调 */
     --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */
     --secondary-color: #0f1622;     /* 深蓝黑背景色 */
-    --accent-color: #ff3c78;        /* 霓虹粉强调色 */
-    --text-color: #e6f2ff;          /* 柔和的蓝白色文本 */
-    --text-muted: #8599b2;          /* 淡蓝灰色次级文本 */
-    --border-color: rgba(0, 204, 255, 0.15);
-    --page-gradient-start: #0f1622; /* 深蓝黑起始色 */
-    --page-gradient-end: #192231;   /* 深靛蓝结束色 */
-    --card-gradient-start: #121b29; /* 卡片起始色 */
+    --accent-color: #f16d38;        /* 霓虹粉强调色 */
+    --text-color: #2e3133;          /* 柔和的蓝白色文本 */
+    --text-muted: #2f4157;          /* 淡蓝灰色次级文本 */
+    --border-color: rgba(64, 164, 189, 0.15);
+    --page-gradient-start: #4e7f97; /* 深蓝黑起始色 */
+    --page-gradient-end: #133366;   /* 深靛蓝结束色 */
+    --card-gradient-start: #aec1df; /* 卡片起始色 */
     --card-gradient-end: #1c2939;   /* 卡片结束色 */
     --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */
     --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜色 */
@@ -59,9 +59,9 @@ LibreTV 全局样式
     /* 柔和赛博点状背景 */
     background-image: 
         linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end)),
-        radial-gradient(circle at 25px 25px, rgba(0, 204, 255, 0.04) 2px, transparent 3px),
-        radial-gradient(circle at 75px 75px, rgba(255, 60, 120, 0.02) 1px, transparent 2px),
-        radial-gradient(circle at 50px 50px, rgba(150, 255, 250, 0.015) 1px, transparent 2px);
+        radial-gradient(circle at 25px 25px, rgba(120, 171, 184, 0.04) 2px, transparent 3px),
+        radial-gradient(circle at 75px 75px, rgba(221, 132, 159, 0.02) 1px, transparent 2px),
+        radial-gradient(circle at 50px 50px, rgba(132, 223, 218, 0.015) 1px, transparent 2px);
     background-blend-mode: normal;
     background-size: cover, 100px 100px, 50px 50px, 75px 75px;
 }
