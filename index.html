@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPEN SOURCE MOVIE</title>
-    <!-- <meta name="description" content="开源观影平台是一个免费的在线视频搜索平台，无广告、安全，提供来自多个视频源的内容搜索与观看服务，无需注册即可使用。"> -->
-    <!-- <meta name="keywords" content="在线视频,免费视频,视频搜索,电影,电视剧,开源观影平台"> -->
-    <!-- <meta name="author" content="开源观影平台 Team"> -->
 
     <!-- Favicon -->
     <link rel="icon" href="image/logo.png">
@@ -111,11 +108,6 @@
                     <input type="text" id="customApiUrl" placeholder="https://abc.com" class="w-full bg-[#222] border border-[#333] text-white px-2 py-1 rounded mb-2" autocomplete="off">
                     <!-- 新增 detail 地址输入框 -->
                     <input type="text" id="customApiDetail" placeholder="detail地址（可选）" class="w-full bg-[#222] border border-[#333] text-white px-2 py-1 rounded mb-2" autocomplete="off">
-                    <!-- 添加成人内容切换 -->
-                    <!-- <div class="flex items-center mb-2">
-                        <input type="checkbox" id="customApiIsAdult" class="form-checkbox h-4 w-4 text-pink-500 bg-[#222] border border-[#333]">
-                        <label for="customApiIsAdult" class="ml-2 text-xs text-pink-400">黄色资源站</label>
-                    </div> -->
                     <div class="flex space-x-2">
                         <button onclick="addCustomApi()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs">添加</button>
                         <button onclick="cancelAddCustomApi()" class="bg-[#444] hover:bg-[#555] text-white px-3 py-1 rounded text-xs">取消</button>
@@ -131,8 +123,8 @@
                 <div class="flex flex-col mb-3 pb-3 border-b border-[#222] relative">
                     <div class="flex items-center justify-between">
                         <div>
-                            <label class="text-sm font-medium text-gray-400">黄色内容过滤</label>
-                            <p class="text-xs text-gray-500 mt-1 filter-description">过滤"伦理片"等黄色内容</p>
+                            <label class="text-sm font-medium text-gray-400">过滤人类不正当指向行为</label>
+                            <p class="text-xs text-gray-500 mt-1 filter-description">过滤违反道德伦理法制的内容</p>
                         </div>
                         <div class="relative inline-block w-12 align-middle select-none">
                             <input type="checkbox" id="yellowFilterToggle" class="opacity-0 absolute w-full h-full cursor-pointer z-10">
@@ -299,19 +291,16 @@
                         </svg>
                         <span class="gradient-text font-bold">OPEN SOURCE MOVIE</span>
                     </div>
-                    <p class="text-gray-500 text-sm mt-2 text-center md:text-left" style="color: #eeeeee;">2026@Charles | Millychck@gmail.com</p>
+                    <p class="text-gray-500 text-sm mt-2 text-center md:text-left" style="color: #eeeeee;">2026©️Charles | Millychck@gmail.com</p>
                 </div>
                 
                 <div class="text-center md:text-right">
                     <p class="text-gray-500 text-sm max-w-md" style="color: #eeeeee;">
                         法律特例：<br>
                         LibreSpark<br>
-                        WEB：Charles<br>
+                        WEB：©️Charles<br>
                     </p>
                     <div class="mt-2 flex justify-center md:justify-end space-x-4">
-                        <!-- <a href="about.html" class="text-gray-400 hover:text-white text-sm transition-colors">关于我们</a>
-                        <a href="privacy.html" class="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a> -->
-                        <!-- <a href="https://www.msf.hk/zh-hant/donate/general?type=one-off" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">捐赠</a> -->
                     </div>
                 </div>
             </div>
@@ -401,13 +390,11 @@
         </div>
     </div>
 
-    <!-- JSON-LD 结构化数据 -->
-    <!-- <script type="application/ld+json">
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "开源观影平台",
-        "url": "https://开源观影平台.is-an.org/",
+        "name": "OPEN SOURCE MOVIE",
         "description": "免费在线视频搜索与观看平台",
         "potentialAction": {
             "@type": "SearchAction",
@@ -415,7 +402,7 @@
             "query-input": "required name=search_term_string"
         }
     }
-    </script> -->
+    </script>
 
     <!-- 引入纯 JS sha256（HTTP 下依然可用） -->
     <script src="libs/sha256.min.js"></script>
