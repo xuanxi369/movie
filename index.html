@@ -45,16 +45,16 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
-            <h3 class="text-xl font-bold gradient-text mx-auto">观看历史</h3>
+            <h3 class="text-xl font-bold gradient-text mx-auto">觀看紀錄</h3>
             <div class="w-4"></div> <!-- 添加一个占位元素以确保标题居中 -->
         </div>
         <div id="historyList" class="pb-4">
             <!-- 历史记录将在这里动态显示 -->
-            <div class="text-center text-gray-500 py-8">暂无观看记录</div>
+            <div class="text-center text-gray-500 py-8">暫無觀看紀錄</div>
         </div>
         <div class="mt-4 text-center sticky bottom-0 pb-2 pt-2 bg-[#111]">
             <button onclick="clearViewingHistory()" class="px-4 py-2 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white rounded-lg text-sm transition-all duration-300 shadow-md hover:shadow-lg">
-                清空历史记录
+                清除觀看紀錄
             </button>
         </div>
     </div>
@@ -62,7 +62,7 @@
     <!-- 设置面板 -->
     <div id="settingsPanel" class="settings-panel fixed right-0 top-0 h-full w-80 bg-[#111] border-l border-[#333] p-6 z-40 overflow-y-auto" aria-label="设置面板" aria-hidden="true">
         <div class="flex justify-between items-center mb-6">
-            <h3 class="text-xl font-bold gradient-text">设置</h3>
+            <h3 class="text-xl font-bold gradient-text">設定</h3>
             <button onclick="toggleSettings()" class="close-btn">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -72,13 +72,13 @@
         <div class="space-y-5">
             <!-- 数据源设置区域 -->
             <div class="p-3 bg-[#151515] rounded-lg shadow-inner">
-                <label class="block text-sm font-medium text-gray-400 mb-3 border-b border-[#333] pb-1">数据源设置</label>
+                <label class="block text-sm font-medium text-gray-400 mb-3 border-b border-[#333] pb-1">數據源設定</label>
                 
                 <!-- 批量操作按钮 -->
                 <div class="flex space-x-2 mb-3">
-                    <button onclick="selectAllAPIs(true)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">全选</button>
-                    <button onclick="selectAllAPIs(false)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">全不选</button>
-                    <button onclick="selectAllAPIs(true, true)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">全选普通资源</button>
+                    <button onclick="selectAllAPIs(true)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">全選</button>
+                    <button onclick="selectAllAPIs(false)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">取消全選</button>
+                    <button onclick="selectAllAPIs(true, true)" class="px-2 py-1 bg-[#333] hover:bg-[#444] text-white text-xs rounded">全選普通資源</button>
                 </div>
                 
                 <!-- API选择区域 - 使用滚动区域 -->
@@ -90,7 +90,7 @@
                 
                 <!-- API信息显示 -->
                 <div class="text-xs text-gray-500 flex justify-between items-center">
-                    <span>已选API数量：<span id="selectedApiCount" class="text-white">0</span></span>
+                    <span>已選API數量：<span id="selectedApiCount" class="text-white">0</span></span>
                     <span id="siteStatus" class="ml-2"></span>
                 </div>
             </div>
@@ -98,7 +98,7 @@
             <!-- 自定义API管理区域 -->
             <div class="p-3 bg-[#151515] rounded-lg shadow-inner">
                 <div class="flex justify-between items-center mb-2">
-                    <label class="block text-sm font-medium text-gray-400 border-b border-[#333] w-full pb-1">自定义API</label>
+                    <label class="block text-sm font-medium text-gray-400 border-b border-[#333] w-full pb-1">自訂API</label>
                     <button onclick="showAddCustomApiForm()" class="bg-[#333] hover:bg-[#444] text-white w-6 h-6 rounded-full text-center leading-none text-lg ml-1">+</button>
                 </div>
                 <div id="customApisList" class="max-h-32 overflow-y-auto mb-2">
@@ -112,7 +112,7 @@
                     <!-- 新增 detail 地址输入框 -->
                     <input type="text" id="customApiDetail" placeholder="detail地址（可选）" class="w-full bg-[#222] border border-[#333] text-white px-2 py-1 rounded mb-2" autocomplete="off">
                     <div class="flex space-x-2">
-                        <button onclick="addCustomApi()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs">添加</button>
+                        <button onclick="addCustomApi()" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs">新增</button>
                         <button onclick="cancelAddCustomApi()" class="bg-[#444] hover:bg-[#555] text-white px-3 py-1 rounded text-xs">取消</button>
                     </div>
                 </div>
@@ -120,14 +120,14 @@
             
             <!-- 内容过滤设置区域 -->
             <div class="p-3 bg-[#151515] rounded-lg shadow-inner">
-                <label class="block text-sm font-medium text-gray-400 mb-3 border-b border-[#333] pb-1">功能开关</label>
+                <label class="block text-sm font-medium text-gray-400 mb-3 border-b border-[#333] pb-1">功能開關</label>
                 
                 <!-- 黄色内容过滤开关 -->
                 <div class="flex flex-col mb-3 pb-3 border-b border-[#222] relative">
                     <div class="flex items-center justify-between">
                         <div>
-                            <label class="text-sm font-medium text-gray-400">过滤人类不正当指向行为</label>
-                            <p class="text-xs text-gray-500 mt-1 filter-description">过滤违反道德伦理法制的内容</p>
+                            <label class="text-sm font-medium text-gray-400">過濾不當重新導向行為</label>
+                            <p class="text-xs text-gray-500 mt-1 filter-description">過濾違反道德倫理及法規的內容</p>
                         </div>
                         <div class="relative inline-block w-12 align-middle select-none">
                             <input type="checkbox" id="yellowFilterToggle" class="opacity-0 absolute w-full h-full cursor-pointer z-10">
@@ -141,8 +141,8 @@
                 <!-- 广告过滤开关 -->
                 <div class="flex items-center justify-between mb-3 pb-3 border-b border-[#222]">
                     <div>
-                        <label class="text-sm font-medium text-gray-400">分片广告过滤</label>
-                        <p class="text-xs text-gray-500 mt-1">关闭可减少旧版浏览器卡顿</p>
+                        <label class="text-sm font-medium text-gray-400">分段廣告過濾</label>
+                        <p class="text-xs text-gray-500 mt-1">關閉可減少舊版瀏覽器延遲</p>
                     </div>
                     <div class="relative inline-block w-12 align-middle select-none">
                         <input type="checkbox" id="adFilterToggle" class="opacity-0 absolute w-full h-full cursor-pointer z-10">
@@ -154,8 +154,8 @@
   
                 <div class="flex items-center justify-between opacity-60">  
                     <div>
-                        <label class="text-sm font-medium text-gray-400">豆瓣热门推荐</label>
-                        <p class="text-xs text-gray-500 mt-1">该功能已永久关闭</p>
+                        <label class="text-sm font-medium text-gray-400">豆瓣熱門推薦</label>
+                        <p class="text-xs text-gray-500 mt-1">該功能已永久關閉</p>
                     </div>
                         <span class="text-xs text-gray-600 font-mono">OFF</span> 
                    </div>
@@ -194,7 +194,7 @@
                         <button onclick="resetToHome()" 
                                 class="w-20 sm:w-24 flex items-center justify-center bg-white text-black font-medium hover:bg-gray-200 transition-colors" 
                                 aria-label="返回首页" title="返回首页">
-                            首页
+                            首頁
                         </button>
                         <!-- 搜索输入 -->
                         <input type="text" 
@@ -218,7 +218,7 @@
                         <button onclick="search()" 
                                 class="w-20 sm:w-24 flex items-center justify-center bg-white text-black font-medium hover:bg-gray-200 transition-colors" 
                                 aria-label="搜索按钮">
-                            搜索
+                            搜尋
                         </button>
                     </div>
                     
@@ -239,7 +239,7 @@
                             <div class="flex items-center">
                             </div>
                             <button id="douban-refresh" class="text-sm px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white rounded-lg flex items-center gap-1">
-                                <span>视频内容请检索，首页不再提供推荐信息</span>
+                                <span>影片內容請自行搜尋，首頁不再提供影片推薦資訊</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                 </svg>
@@ -261,7 +261,7 @@
                 <div class="mx-auto max-w-7xl px-2"> <!-- 添加最大宽度限制并居中 -->
                     <div class="flex justify-end items-center mb-4">
                         <div class="text-sm text-gray-400">
-                            <span id="searchResultsCount">0</span> 个结果
+                            <span id="searchResultsCount">0</span> 個結果
                         </div>
                     </div>
                     <!-- 修改网格布局以适应大一些的横向卡片 -->
@@ -289,7 +289,7 @@
                 
                 <div class="text-center md:text-right">
                     <p class="text-gray-500 text-sm max-w-md" style="color: #eeeeee;">
-                        法律特例：<br>
+                        法律豁免：<br>
                         LibreSpark<br>
                         WEB：©️Charles<br>
                     </p>
@@ -318,16 +318,16 @@
     <div id="passwordModal" class="fixed inset-0 bg-black/95 hidden items-center justify-center z-[65] transition-opacity duration-300">
         <div class="bg-[#111] p-8 rounded-lg w-11/12 max-w-md border border-[#333] max-h-[90vh] flex flex-col">
             <div class="flex justify-between items-center mb-6 flex-none">
-                <h2 class="text-2xl font-bold gradient-text">访问验证</h2>
+                <h2 class="text-2xl font-bold gradient-text">身份驗證</h2>
             </div>
             <div class="mb-6">
-                <p class="text-gray-300 mb-4">请输入密码继续访问</p>
+                <p class="text-gray-300 mb-4">請輸入密碼繼續訪問</p>
                 <form id="passwordForm" onsubmit="handlePasswordSubmit(); return false;">
                     <input type="text" name="username" id="username" autocomplete="username" style="display:none" tabindex="-1" aria-hidden="true">
                     <input type="password" id="passwordInput" class="w-full bg-[#111] border border-[#333] text-white px-4 py-3 rounded-lg focus:outline-none focus:border-white transition-colors" placeholder="密码..." autocomplete="new-password">
-                    <button id="passwordSubmitBtn" type="submit" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">提交</button>
+                    <button id="passwordSubmitBtn" type="submit" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">確認</button>
                 </form>
-                <p id="passwordError" class="text-red-500 mt-2 hidden">密码错误，请重试</p>
+                <p id="passwordError" class="text-red-500 mt-2 hidden">密碼錯誤，請重試</p>
             </div>
         </div>
     </div>
@@ -335,28 +335,28 @@
     <!-- 版权声明弹窗 -->
     <div id="disclaimerModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[60]">
         <div class="bg-[#111] p-8 rounded-lg border border-[#333] w-11/12 max-w-2xl max-h-[90vh] overflow-y-auto">
-            <h2 class="text-2xl font-bold gradient-text mb-6 text-center">使用声明</h2>
+            <h2 class="text-2xl font-bold gradient-text mb-6 text-center">免責聲明</h2>
             <div class="text-gray-300 space-y-4">
                 <p>
-                    欢迎使用 OPEN SOURCE MOVIE。在开始使用前，请您了解并同意开源协议：
+                    歡迎使用 OPEN SOURCE MOVIE。開始使用前，請先閱讀並同意開源協議：
                 </p>
                 <p>
-                    <strong class="text-blue-400">使用说明：</strong> Apache 2.0开源协议允许自由使用、修改、分发和商用。
+                    <strong class="text-blue-400">使用聲明：</strong> Apache 2.0 開源協議允許自由使用、修改、分發及商用。
                 </p>
                 <p>
-                    <strong class="text-blue-400">专利保护：</strong> 贡献者自动授予专利许可，降低侵权风险。
+                    <strong class="text-blue-400">專利保護：</strong> 貢獻者自動授予專利授權，降低侵權風險。
                 </p>
                 <p>
-                    <strong class="text-blue-400">版权定向：</strong> 保留原版权声明和协议条款，并注明修改内容。
+                    <strong class="text-blue-400">版權標註：</strong> 保留原有版權聲明及協議條款，並註明修改內容。
                 </p>
                 <p>
-                    <strong class="text-blue-400">项目开源团队地址：</strong> github&LibreSpark
+                    <strong class="text-blue-400">專案開源團隊地址：</strong> github&LibreSpark
                 </p>
                 <p>
-                    <strong class="text-blue-400">项目FORK者地址：</strong> github&xuanxi369
+                    <strong class="text-blue-400">專案Fork者地址：</strong> github&xuanxi369
                 </p>
                 <p>
-                    <strong class="text-blue-400">FORK者声明：</strong> 实际不对用户的使用行为承担任何法律责任
+                    <strong class="text-blue-400">FORK者聲明：</strong> 對於用戶的使用行為，本方不承擔任何法律責任
                 </p>
                 <p>
                     <strong class="text-blue-400">FORK者：</strong> 2026©Charles | Millychck@gmail.com
@@ -364,7 +364,7 @@
             </div>
             <div class="mt-6 flex justify-center">
                 <button id="acceptDisclaimerBtn" class="px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
-                    我已了解并接受
+                    我已了解並接受
                 </button>
             </div>
         </div>
@@ -379,7 +379,7 @@
     <div id="loading" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
         <div class="bg-[#111] p-8 rounded-lg border border-[#333] flex items-center space-x-4">
             <div class="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-            <p class="text-white text-lg">加载中...</p>
+            <p class="text-white text-lg">載入中...</p>
         </div>
     </div>
 
