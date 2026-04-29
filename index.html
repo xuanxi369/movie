@@ -150,32 +150,6 @@
                         <div class="toggle-dot absolute w-5 h-5 bg-white rounded-full top-0.5 left-0.5 transition-transform duration-300 ease-in-out"></div>
                     </div>
                 </div>
-                
-                <!-- 豆瓣热门开关 - 已禁用版 -->
-                <!-- <div class="flex items-center justify-between"> -->
-                <div class="flex items-center justify-between opacity-60"> <!-- 降低透明度表示不可用 -->
-                    <div>
-                        <label class="text-sm font-medium text-gray-400">豆瓣热门推荐</label>
-                        <!-- <p class="text-xs text-gray-500 mt-1">首页显示豆瓣热门影视内容</p> -->
-                        <p class="text-xs text-gray-500 mt-1">该功能已永久关闭</p>
-                    </div>
-                    <!-- <div class="relative inline-block w-12 align-middle select-none"> -->
-                        <!-- <input type="checkbox" id="doubanToggle" class="opacity-0 absolute w-full h-full cursor-pointer z-10">
-                        <div class="toggle-bg bg-[#333] w-12 h-6 rounded-full transition-colors duration-300 ease-in-out"></div>
-                        <div class="toggle-dot absolute w-5 h-5 bg-white rounded-full top-0.5 left-0.5 transition-transform duration-300 ease-in-out"></div> -->
-                        <span class="text-xs text-gray-600 font-mono">OFF</span> 
-                    <!-- </div> -->
-                </div>
-            </div>
-                 
-                <!-- <div class="flex items-center justify-between opacity-60"> <!-- 降低透明度表示不可用 --> -->
-                    <!-- <div> -->
-                        <!-- <label class="text-sm font-medium text-gray-400">豆瓣热门推荐</label> -->
-                        <!-- <p class="text-xs text-gray-500 mt-1">该功能已永久关闭</p> -->
-                    <!-- </div> -->
-                <!-- 移除原有的 input 和 toggle 结构 -->
-                    <!-- <span class="text-xs text-gray-600 font-mono">OFF</span>  -->
-                <!-- </div> -->
 
             <!-- 一般功能区域 -->
             <div class="p-3 bg-[#151515] rounded-lg shadow-inner">
@@ -253,15 +227,15 @@
                         <!-- 标题和刷新按钮一行 -->
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center">
-                                <h2 class="text-xl font-bold text-white mr-4">豆瓣热门</h2>
+                                <!-- <h2 class="text-xl font-bold text-white mr-4">豆瓣热门</h2> -->
                                 <!-- 添加电影/电视剧切换开关 -->
-                                <div class="flex items-center bg-[#222] rounded-full p-1">
+                                <!-- <div class="flex items-center bg-[#222] rounded-full p-1">
                                     <button id="douban-movie-toggle" class="px-3 py-1 text-sm rounded-full bg-pink-600 text-white">电影</button>
                                     <button id="douban-tv-toggle" class="px-3 py-1 text-sm rounded-full text-gray-300 hover:text-white">电视剧</button>
-                                </div>
+                                </div> -->
                             </div>
                             <button id="douban-refresh" class="text-sm px-3 py-1 bg-pink-600 hover:bg-pink-700 text-white rounded-lg flex items-center gap-1">
-                                <span>换一批</span>
+                                <span>视频内容请检索，首页不再提供推荐信息</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                 </svg>
@@ -406,7 +380,7 @@
     </div>
 
     <script type="application/ld+json">
-    {
+    <!-- {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "OPEN SOURCE MOVIE",
@@ -416,7 +390,7 @@
             "target": "https://开源观影平台.is-an.org/?s={search_term_string}",
             "query-input": "required name=search_term_string"
         }
-    }
+    } -->
     </script>
 
     <!-- 引入纯 JS sha256（HTTP 下依然可用） -->
