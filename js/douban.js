@@ -55,6 +55,7 @@ const doubanPageSize = 16; // 一次显示的项目数量
 
 // 初始化豆瓣功能
 function initDouban() {
+    return;
     // 设置豆瓣开关的初始状态
     const doubanToggle = document.getElementById('doubanToggle');
     if (doubanToggle) {
@@ -116,6 +117,9 @@ function initDouban() {
 function updateDoubanVisibility() {
     const doubanArea = document.getElementById('doubanArea');
     if (!doubanArea) return;
+    // 强制直接隐藏，不管本地存储是什么状态
+    doubanArea.classList.add('hidden'); 
+    return; // <--- 直接结束函数
     
     const isEnabled = localStorage.getItem('doubanEnabled') === 'true';
     const isSearching = document.getElementById('resultsArea') && 
@@ -408,6 +412,7 @@ function fetchDoubanTags() {
 
 // 渲染热门推荐内容
 function renderRecommend(tag, pageLimit, pageStart) {
+    return;
     const container = document.getElementById("douban-results");
     if (!container) return;
 
@@ -786,3 +791,6 @@ function resetTagsToDefault() {
     
     showToast('已恢复默认标签', 'success');
 }
+localStorage.removeItem('doubanEnabled');
+localStorage.removeItem('userMovieTags');
+localStorage.removeItem('userTvTags');
