@@ -37,39 +37,39 @@ LibreTV 全局样式
 }
 
  
- :root {
-    /* 赛博影视主题配色方案 - 柔和版 */
-    --primary-color: #00ccff;       /* 霓虹蓝主色调 */
-    --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */
-    --secondary-color: #0f1622;     /* 深蓝黑背景色 */
-    --accent-color: #ff3c78;        /* 霓虹粉强调色 */
-    --text-color: #e6f2ff;          /* 柔和的蓝白色文本 */
-    --text-muted: #8599b2;          /* 淡蓝灰色次级文本 */
-    --border-color: rgba(0, 204, 255, 0.15);
-    --page-gradient-start: #0f1622; /* 深蓝黑起始色 */
-    --page-gradient-end: #192231;   /* 深靛蓝结束色 */
-    --card-gradient-start: #aec1df; /* 卡片起始色 */
-    --card-gradient-end: #203145;   /* 卡片结束色 */
-    --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */
-    --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜
-}
+:root {
+  /* 霓虹主调 - 深夜蓝光 */
+  --primary-color: #00b2ff;           /* 主霓虹蓝 - 冷艳清澈 */
+  --primary-light: #33ccff;           /* 轻霓虹蓝 - hover 提亮用 */
+  --primary-dark: #0077aa;            /* 深霓虹蓝 - 聚焦/按钮阴影 */
 
-/* :root {
-    
-    /* --primary-color: #1abc9c;       /* 霓虹蓝主色调 */ */
-    /* --primary-light: #33d6ff;       /* 浅霓虹蓝变体 */ */
-    /* --secondary-color: #2e2e2e;     /* 深蓝黑背景色 */ */
-    /* --accent-color: #ff3c78;        /* 霓虹粉强调色 */ */
-    /* --text-color: #e6f2ff;          /* 柔和的蓝白色文本 */ */
-    /* --text-muted: #8599b2;          /* 淡蓝灰色次级文本 */ */
-    /* --border-color: rgba(0, 204, 255, 0.15); */
-    /* --page-gradient-start: #0f1622; /* 深蓝黑起始色 */ */
-    /* --page-gradient-end: #192231;   /* 深靛蓝结束色 */ */
-    /* --card-gradient-start: #aec1df; /* 卡片起始色 */ */
-    /* --card-gradient-end: #203145;   /* 卡片结束色 */ */
-    /* --card-accent: rgba(0, 204, 255, 0.12); /* 霓虹蓝卡片强调色 */ */
-    /* --card-hover-border: rgba(0, 204, 255, 0.5); /* 悬停边框颜 */
-/* } */     
+  /* 视觉强调色 - 夜行玫红 */
+  --accent-color: #ff337a;            /* 主强调色 - 有未来感的热感粉 */
+  --accent-light: #ff6da9;            /* 浅强调色 - 点缀亮面用 */
+
+  /* 背景与深层色 */
+  --secondary-color: #0c121a;         /* 主背景 - 赛博深蓝黑 */
+  --surface-color: #121a24;           /* 卡片/浮层背景 */
+  --border-color: rgba(0, 178, 255, 0.12);  /* 边框淡霓虹蓝 */
+
+  /* 渐变背景 */
+  --page-gradient-start: #0c121a;
+  --page-gradient-end: #1c2735;
+  --card-gradient-start: #1e2b38;
+  --card-gradient-end: #263848;
+  --card-accent: rgba(0, 178, 255, 0.15);   /* 卡片光流层 */
+  --card-hover-border: rgba(0, 178, 255, 0.5);
+
+  /* 文本色 */
+  --text-color: #e4f7ff;              /* 主文本 - 柔光白蓝 */
+  --text-muted: #8ba4b8;              /* 次级文本 - 冷灰蓝 */
+  --text-inverted: #0c121a;           /* 黑色背景上强调色反转 */
+
+  /* 状态色彩（可选扩展） */
+  --success-color: #00ffcc;
+  --warning-color: #ffaa33;
+  --error-color: #ff3366;
+}   
         
 .page-bg {
     background: linear-gradient(180deg, var(--page-gradient-start), var(--page-gradient-end));
