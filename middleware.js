@@ -46,6 +46,14 @@ export default async function middleware(request) {
     .replace(
       'window.__ENV__.ADMINPASSWORD = "{{ADMINPASSWORD}}";',
       `window.__ENV__.ADMINPASSWORD = "${adminpasswordHash}"; // SHA-256 hash`
+    )
+  .replace(
+    'window.__ENV__.PASSWORD_1 = "{{PASSWORD_1}}";',
+    `window.__ENV__.PASSWORD_1 = "${password1Hash}";`
+    )
+  .replace(
+    'window.__ENV__.ADMINPASSWORD_1 = "{{ADMINPASSWORD_1}}";',
+    `window.__ENV__.ADMINPASSWORD_1 = "${adminpassword1Hash}";`
     );
 
   // 修复Response构造
