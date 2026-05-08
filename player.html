@@ -368,7 +368,8 @@
         // PASSWORD 变量将在这里被服务器端注入
         window.__ENV__.PASSWORD = "{{PASSWORD}}";
         window.__ENV__.ADMINPASSWORD = "{{ADMINPASSWORD}}";
-
+        window.__ENV__.PASSWORD_1 = "{{PASSWORD1}}";
+        window.__ENV__.ADMINPASSWORD_1 = "{{ADMINPASSWORD1}}";
         // 修复 home 跳转
         document.addEventListener('DOMContentLoaded', function() {
             // 使用事件委托处理首页按钮点击
