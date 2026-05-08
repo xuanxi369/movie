@@ -16,6 +16,10 @@ const config = {
   port: process.env.PORT || 8080,
   password: process.env.PASSWORD || '',
   adminpassword: process.env.ADMINPASSWORD || '',
+  //
+  password: process.env.PASSWORD_1 || '',
+  adminpassword: process.env.ADMINPASSWORD_1 || '',
+  
   corsOrigin: process.env.CORS_ORIGIN || '*',
   timeout: parseInt(process.env.REQUEST_TIMEOUT || '5000'),
   maxRetries: parseInt(process.env.MAX_RETRIES || '2'),
@@ -59,10 +63,24 @@ async function renderPage(filePath, password) {
     const sha256 = await sha256Hash(password);
     content = content.replace('{{PASSWORD}}', sha256);
   }
+  //
+  async function renderPage(filePath, password) {
+  let content = fs.readFileSync(filePath, 'utf8');
+  if (password !== '') {
+    const sha256 = await sha256Hash(password);
+    content = content.replace('{{PASSWORD_1}}', sha256);
+  }
   // 添加ADMINPASSWORD注入
   if (config.adminpassword !== '') {
       const adminSha256 = await sha256Hash(config.adminpassword);
       content = content.replace('{{ADMINPASSWORD}}', adminSha256);
+  } 
+  return content;
+}
+  //
+    if (config.adminpassword !== '') {
+      const adminSha256 = await sha256Hash(config.adminpassword);
+      content = content.replace('{{ADMINPASSWORD_1}}', adminSha256);
   } 
   return content;
 }
